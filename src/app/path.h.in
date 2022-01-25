@@ -1,0 +1,14 @@
+/* 
+ * path.h.in
+ * Created on: Jan 25, 2022 23:01
+ * Description: 
+ * 
+ * Copyright (c) 2022 Pin Loon Lee (pllee4)
+ */ 
+
+#ifndef PATH_H_IN
+#define PATH_H_IN
+
+#define LIB_PATH "${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}"
+
+#endif /* PATH_H_IN */

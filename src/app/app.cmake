@@ -1,0 +1,1 @@
+configure_file(path.h.in include/path.h)

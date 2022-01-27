@@ -8,8 +8,18 @@
 
 using namespace std;
 
+#ifdef WIN32
+std::string protocol_V1_path = std::string(LIB_PATH) + "libProtocolV1.dll";
+std::string protocol_V2_path = std::string(LIB_PATH) + "libProtocolV2.dll";
+#endif
+#ifdef __linux__
 std::string protocol_V1_path = std::string(LIB_PATH) + "libProtocolV1.so";
 std::string protocol_V2_path = std::string(LIB_PATH) + "libProtocolV2.so";
+#endif
+#ifdef __APPLE__
+std::string protocol_V1_path = std::string(LIB_PATH) + "libProtocolV1.dylib";
+std::string protocol_V2_path = std::string(LIB_PATH) + "libProtocolV2.dylib";
+#endif
 
 void Initialize(const std::string& path) {
   dlloader::DLLoader<Interface> dlloader(path);
